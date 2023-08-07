@@ -5,7 +5,7 @@ class Person:
         #self.first_name = firstName #make up a property of the class "firstName"
     
     def __init__(self, firstName, middleName, lastName):
-        if not isinstance(firstName, str):
+        if not isinstance(firstName, str): #if the type doesn't match
             print('Bad boy!')
 
         self.first_name = firstName

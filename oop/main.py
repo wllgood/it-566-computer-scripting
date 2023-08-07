@@ -32,6 +32,7 @@ def main():
     for s in students:
         print(f'{s}')
 
+
     student_dictionary = {"s1": json.loads(s1.toJSON()), "s2": json.loads(s2.toJSON())}
     print(json.dumps(student_dictionary))
 
