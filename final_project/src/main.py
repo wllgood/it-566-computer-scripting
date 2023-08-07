@@ -1,5 +1,5 @@
 from surname import SurnameList
-from APIkey import APIkey
+
 
 def main():
     app = SurnameList()
@@ -37,12 +37,4 @@ top_10_surname_list = surname_data_sort['NAME'].tolist()
 
 surname_str = ",".join(top_10_surname_list)
 #print(f'List of top 10 surnames as one string: {surname_str}')
-
-
-#top 10 surnames in non-Hispanic White
-url = "https://api.census.gov/data/2010/surname?get=PCTWHITE,COUNT,NAME&RANK=1:100&key={0}".format(API_key)
-response = requests.request("GET", url)
-surname_data = json_to_dataframe(response)
-surname_data_sort_white = surname_data.sort_values(by=['COUNT'], ascending=False).head(10)
-print(f'Top 10 surnames in non-hispanic white: \n{surname_data_sort_white}')
 '''
